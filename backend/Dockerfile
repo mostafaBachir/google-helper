@@ -19,11 +19,11 @@ RUN pip install --no-cache-dir -r req.txt
 # Copie le code de l'application dans le conteneur
 COPY . /app/
 
-# Expose le port 8000 pour Django
-EXPOSE 8000
+# Expose le port 8080 pour Django
+EXPOSE 8080
 
 
 # Démarre le serveur de développement Django
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8080"]
 # Pour la production, décommentez la ligne suivante et commentez la ligne ci-dessus
-# CMD ["gunicorn", "--bind", "0.0.0.0:8000", "config.wsgi:application"]
+# CMD ["gunicorn", "--bind", "0.0.0.0:8080", "config.wsgi:application"]
