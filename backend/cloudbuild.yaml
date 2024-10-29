@@ -8,6 +8,7 @@ steps:
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: 'gcloud'
   args: ['run', 'deploy', 'backend', '--image', 'gcr.io/quantum-conduit-440002-e4/backend', '--region', 'us-central1', '--platform', 'managed']
-
+options:
+  logging: CLOUD_LOGGING_ONLY
 images:
 - 'gcr.io/quantum-conduit-440002-e4/backend'
