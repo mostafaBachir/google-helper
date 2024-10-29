@@ -1,0 +1,13 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/quantum-conduit-440002-e4/backend', '.']
+
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/quantum-conduit-440002-e4/backend']
+
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: 'gcloud'
+  args: ['run', 'deploy', 'backend', '--image', 'gcr.io/quantum-conduit-440002-e4/backend', '--region', 'us-central1', '--platform', 'managed']
+
+images:
+- 'gcr.io/quantum-conduit-440002-e4/backend'
