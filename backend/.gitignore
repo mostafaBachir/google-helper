@@ -1,0 +1,50 @@
+# Environnement virtuel Python
+vlib/
+
+# Fichiers compilés Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Paramètres de l'environnement
+.env
+*.env
+
+# Fichiers de logs
+*.log
+*.sqlite3
+
+# Fichiers de migration Django
+*/migrations/*.py
+*/migrations/*.pyc
+
+# Paramètres de l'éditeur
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Fichiers de dépendances Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Configurations système
+.DS_Store
+Thumbs.db
+
+# Staticfiles de Django
+/staticfiles/
+/media/
+
+# Autres caches et fichiers temporaires
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Fichiers de tests unitaires
+.coverage
+.tox/
+.pytest_cache/
+htmlcov/
+.cache/
